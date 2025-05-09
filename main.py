@@ -165,7 +165,7 @@ def check_lost():
 
 
 def get_shape():
-    pass
+    return Piece(5, 0, random.choice(shapes)) # This function returns a random shape from the list with shapes
 
 
 
