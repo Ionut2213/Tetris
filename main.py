@@ -128,14 +128,22 @@ T = [['.....',
 
 shapes = [S, Z, I, O, J, L, T] #list of shapes
 shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255), (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)] # colors for the shapes
+                        # Index 0 - 6  
+                        
+                                    
 
 
 
 
 #Functions
 
-class Piece(): #class for the pieces
-    pass
+class Piece(object): #class for the pieces
+    def __init__(self, x, y, shape):
+        self.x = x
+        self.y = y
+        self.shape = shape
+        self.color = shape_colors[shapes.index(shape)] # Getting the color of the shape
+        self.rotation = 0 # Rotation of the shape
 
 
 
