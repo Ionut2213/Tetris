@@ -182,8 +182,16 @@ def draw_text_middle():
 
 
 
-def draw_grid():
-    pass
+def draw_grid(surface, grid):
+    for i in range(len(grid[i])):
+        for j in range(len(grid[i])):
+            # Draw a filled rectangle on the surface at position coresponding to the grid cell (i, j) using the color stored in grid[i][j]
+            # The position is calculated based on top_left_x , top_left_y and block size and starting position on the screen
+            pygame.draw.rect(surface, grid[i][j], (top_left_x + j * block_size, top_left_y + i * block_size, block_size, block_size), 0)
+            
+
+    pygame.draw.rect(surface, (255, 0, 0), (top_left_x, top_left_y, play_width, play_height), 5) # draw the border of the grid
+    
 
 
 
